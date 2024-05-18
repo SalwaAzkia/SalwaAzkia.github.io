@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="shortcut.png">
+    <title>NashaBot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container theme-default">
+        <div class="header">
+            <img src="headers/Header.png" alt="Header Image">
+        </div>
+        <div class="message-board">
+            <ul id="messages" class="messages"></ul>
+        </div>
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type a message..." required>
+            <button type="submit">Send</button>
+        </form>
+        <div class="color-picker">
+            <p class="color-picker-title">Choose a theme color:</p>
+            <div class="color-options">
+                <div class="color-option" data-color="theme-default" style="background-color: white;"></div>
+                <div class="color-option" data-color="theme-black" style="background-color: rgb(24, 23, 22);"></div>
+                <div class="color-option" data-color="theme-green" style="background-color: rgb(70, 138, 98);"></div>
+                <div class="color-option" data-color="theme-blue" style="background-color: rgb(98, 98, 179);"></div>
+                <div class="color-option" data-color="theme-red" style="background-color: rgb(172, 41, 41);"></div>
+                <div class="color-option" data-color="theme-yellow" style="background-color: rgb(255, 223, 70);"></div>
+            </div>
+        </div>
+        <!-- Popup buttons -->
+        <div class="popup-buttons">
+            <button class="popup-button" data-popup="guide"><i class='bx bx-help-circle'></i></button>
+            <button class="popup-button" data-popup="history"><i class='bx bx-info-circle'></i></button>
+            <button class="popup-button" data-popup="thanks"><i class='bx bx-captions'></i></button>
+        </div>
+    </div>
+
+    <!-- Popup Container -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <img id="popup-image" class="popup-image" src="" alt="Popup Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
